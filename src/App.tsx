@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header, TodoForm } from "./components";
+import { OurApp } from "./context/appContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="bg-slate-100 dark:bg-slate-900 h-screen dark:text-white">
+			<OurApp>
+				<Header />
+				<TodoForm />
+			</OurApp>
+		</div>
+	);
 }
 
 export default App;
